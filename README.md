@@ -44,11 +44,3 @@ By default the command also writes `lrs2_exptime_calc.html`. Choose another
 path with `--bokeh-output`, or combine it with `--sn-output` to produce both
 outputs. The standalone legacy command remains available as
 `python lrs2_exposure_time_calc.py`.
-
-## Scope note
-
-The handoff mentions `dichroic_uv_orange_fit.py` because that script belongs to
-the parent Panacea repository and is a separate UV/orange dichroic-fitting
-workflow. It is not imported by this calculator and is intentionally not
-copied here; the exposure-time model only needs the calibration files bundled
-in `lrs2_config/`.
