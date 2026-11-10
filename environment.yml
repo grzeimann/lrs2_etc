@@ -1,0 +1,9 @@
+name: lrs2-etc
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.9
+  - numpy>=1.20
+  - astropy>=5.0
+  - bokeh>=3.0
+  - pytest>=7

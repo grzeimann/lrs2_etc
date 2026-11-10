@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lrs2-etc"
+version = "0.1.0"
+description = "LRS2 spectrograph exposure-time calculator"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.20",
+    "astropy>=5.0",
+]
+
+[project.optional-dependencies]
+bokeh = ["bokeh>=3.0"]
+test = ["pytest>=7"]
+
+[project.scripts]
+lrs2-etc = "lrs2_etc.calculator:main"
+
+[tool.setuptools]
+include-package-data = true
+py-modules = ["lrs2_exposure_time_calc"]
+
+[tool.setuptools.packages.find]
+include = ["lrs2_etc", "lrs2_config"]
+
+[tool.setuptools.package-data]
+lrs2_config = ["*.fits"]
